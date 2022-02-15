@@ -1,18 +1,12 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/main.css">
-    <title>Laravel Blog</title>
-</head>
-<body>
-    <?php foreach ($posts as $post) : ?>
+<x-layout>
+    @foreach ($posts as $post)
+
+
     <article>
-        <?= $post; ?>
+        <h1><a href="{{$post->id}}">{{$post->title}}</a></h1>
+        <p>{{$post->excerpt}}</p>
     </article>
-    <?php endforeach; ?>
+    @endforeach
 
 
-</body>
-</html>
+</x-layout>

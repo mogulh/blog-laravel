@@ -21,11 +21,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('{post}', function ($slug) {
+Route::get('{post}', function ($id) {
 
-
-    $post = Post::find($slug);
+    // dd($id);
+    $post = Post::find($id);
 
     return view('post',
     ['post' => $post]);
-})->where('post', '[A-z_\-]+');
+});
