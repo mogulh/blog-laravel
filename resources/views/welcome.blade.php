@@ -3,7 +3,8 @@
 
 
     <article>
-        <h1><a href="{{$post->id}}">{{$post->title}}</a></h1>
+        <h1><a href="{{$post->slug}}">{{$post->title}}</a></h1>
+        <p><a href="/categories/{{$post->category->name}}">{{$post->category->name}}</a></p>
         <p>{{$post->excerpt}}</p>
     </article>
     @endforeach
